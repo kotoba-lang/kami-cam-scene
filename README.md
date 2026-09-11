@@ -1,7 +1,7 @@
 # kami-cam-scene
 
 EDN authoring surface for `kami-cam` STOCK MATERIAL presets. Restored as a
-zero-dependency portable `.cljc` namespace (`cam-scene`, `src/cam_scene.cljc`,
+zero-dependency portable `.cljc` namespace (`cam-scene`, `src/cam_scene.cljk`,
 157 lines) from the legacy `kami-cam-scene` Rust crate in
 `kotoba-lang/kami-engine` (deleted in PR #82 "Remove Rust workspace from
 kami-engine"; source recoverable at commit
@@ -49,13 +49,13 @@ crate, mirroring the original Rust split.
 `resources/kami_cam_scene/materials.edn` holds the canonical
 `:cam/materials` table (byte-for-byte the same content as the original
 crate's `data/materials.edn`). The same text is embedded as the
-`cam-scene/materials-edn` string constant in `src/cam_scene.cljc` — the
+`cam-scene/materials-edn` string constant in `src/cam_scene.cljk` — the
 CLJC analogue of the original's `include_str!("../data/materials.edn")` —
 so the namespace does no runtime file IO and stays portable to cljs/wasm.
 
 ## Tests
 
-`test/cam_scene_test.cljc` (98 lines) ports all 6 original `#[test]`s from
+`test/cam_scene_test.cljk` (98 lines) ports all 6 original `#[test]`s from
 `src/lib.rs` and both parity tests from `tests/materials_parity.rs`, plus
 one namespace-loads smoke test: 10 tests / 50 assertions, 0 failures.
 
