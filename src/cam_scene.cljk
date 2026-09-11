@@ -16,7 +16,7 @@
   - `kotoba.cam.stock` (kotoba-lang/cnc) supplies the CANONICAL/compiled-in
     material builders (`aluminum-6061`, `steel-1045`, `titanium-ti6al4v`,
     `abs-plastic`, `wood-oak`) that this namespace's EDN is parity-tested
-    against in `test/cam_scene_test.cljc` — the oracle is the real
+    against in `test/cam_scene_test.cljk` — the oracle is the real
     `kotoba.cam.stock` functions, never hand-transcribed numbers. `cnc`
     itself stays EDN-free; the EDN dependency lives only here, matching
     the original crate's split (kami-cam stays edn-free, kami-cam-scene
