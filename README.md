@@ -62,5 +62,5 @@ one namespace-loads smoke test: 10 tests / 50 assertions, 0 failures.
 Run with:
 
 ```
-clojure -M:test
+kbb -M:test
 ```
